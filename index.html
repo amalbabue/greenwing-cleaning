@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greenwing Cleaning Services | Industrial & Commercial Cleaning in Mississauga</title>
+  <meta name="description" content="Greenwing Cleaning Services provides industrial and commercial cleaning services in Mississauga and across the GTA. Request a free quote today." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#home">
+        <img src="assets/greenwing-logo.png" alt="Greenwing Cleaning Services logo" />
+      </a>
+      <button class="menu-btn" id="menuBtn">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#industries">Industries</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Request Quote</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">Mississauga • GTA • Commercial & Industrial</p>
+        <h1>Professional Industrial & Commercial Cleaning Services</h1>
+        <p class="hero-text">
+          Reliable cleaning solutions for warehouses, offices, industrial sites, and commercial facilities across Mississauga and the GTA.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">Request a Free Quote</a>
+          <a class="btn secondary" href="tel:+16475485232">Call 647 548 5232</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Why Greenwing?</h3>
+        <ul>
+          <li>Flexible cleaning schedules</li>
+          <li>Industrial and commercial focus</li>
+          <li>Reliable, professional service</li>
+          <li>Serving Mississauga and the GTA</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-heading">
+        <p class="eyebrow">Our Services</p>
+        <h2>Cleaning solutions built for business facilities</h2>
+      </div>
+      <div class="grid cards">
+        <article class="card"><h3>Industrial Cleaning</h3><p>Deep cleaning support for industrial and operational environments.</p></article>
+        <article class="card"><h3>Warehouse Cleaning</h3><p>Cleaning for aisles, staging areas, docks, racking zones, and common areas.</p></article>
+        <article class="card"><h3>Commercial Office Cleaning</h3><p>Routine cleaning for offices, washrooms, lunchrooms, and shared spaces.</p></article>
+        <article class="card"><h3>Post-Construction Cleaning</h3><p>Clean-up support after renovations, repairs, and construction projects.</p></article>
+        <article class="card"><h3>Floor Cleaning & Scrubbing</h3><p>Floor care for high-traffic commercial and industrial spaces.</p></article>
+        <article class="card"><h3>Janitorial Services</h3><p>Ongoing cleaning programs tailored to your facility schedule.</p></article>
+      </div>
+    </section>
+
+    <section class="section green-band" id="industries">
+      <div class="section-heading light">
+        <p class="eyebrow">Industries Served</p>
+        <h2>Supporting clean, safe, and professional workspaces</h2>
+      </div>
+      <div class="industry-list">
+        <span>Warehouses</span>
+        <span>Distribution Centres</span>
+        <span>Manufacturing Facilities</span>
+        <span>Offices</span>
+        <span>Retail Spaces</span>
+        <span>Property Management Buildings</span>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div>
+        <p class="eyebrow">About Greenwing</p>
+        <h2>Reliable cleaning service with a professional approach</h2>
+        <p>
+          Greenwing Cleaning Services provides commercial and industrial cleaning solutions for businesses in Mississauga and across the GTA. We focus on dependable service, flexible scheduling, and clean results that support your daily operations.
+        </p>
+      </div>
+      <div class="about-box">
+        <h3>Service Area</h3>
+        <p>Mississauga, Ontario and surrounding GTA areas.</p>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-info">
+        <p class="eyebrow">Contact</p>
+        <h2>Request a free quote</h2>
+        <p>Tell us about your facility and cleaning needs. We will review your request and get back to you.</p>
+        <p><strong>Phone:</strong> <a href="tel:+16475485232">647 548 5232</a></p>
+        <p><strong>Email:</strong> <a href="mailto:amal@greenwingcleaning.ca">amal@greenwingcleaning.ca</a></p>
+      </div>
+
+      <form class="quote-form" id="quoteForm">
+        <label>Full Name <input type="text" name="name" required /></label>
+        <label>Company Name <input type="text" name="company" /></label>
+        <label>Phone Number <input type="tel" name="phone" required /></label>
+        <label>Email <input type="email" name="email" required /></label>
+        <label>Service Needed
+          <select name="service">
+            <option>Industrial Cleaning</option>
+            <option>Warehouse Cleaning</option>
+            <option>Commercial Office Cleaning</option>
+            <option>Post-Construction Cleaning</option>
+            <option>Floor Cleaning & Scrubbing</option>
+            <option>Janitorial Services</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>Message <textarea name="message" rows="5" required></textarea></label>
+        <button type="submit" class="btn primary full">Send Quote Request</button>
+        <p class="form-note">This opens your email app and sends the quote request to amal@greenwingcleaning.ca.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Greenwing Cleaning Services. All rights reserved.</p>
+    <p>greenwingcleaning.ca</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
