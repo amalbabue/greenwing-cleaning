@@ -1,0 +1,538 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --green: #087a34;
+  --green-dark: #045424;
+  --green-soft: #eef8f1;
+  --blue: #123a78;
+  --text: #111827;
+  --muted: #5f6b76;
+  --white: #ffffff;
+  --shadow: 0 18px 45px rgba(0, 0, 0, 0.11);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: white;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topbar {
+  background: var(--green-dark);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 9px 7%;
+  font-size: 14px;
+}
+
+.topbar-links {
+  display: flex;
+  gap: 25px;
+}
+
+.header {
+  background: white;
+  min-height: 105px;
+  padding: 18px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  width: 250px;
+  max-height: 82px;
+  object-fit: contain;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.nav a:hover {
+  color: var(--green);
+}
+
+.nav-quote {
+  background: var(--green);
+  color: white !important;
+  padding: 14px 20px;
+  border-radius: 5px;
+}
+
+.menu-btn {
+  display: none;
+  border: 0;
+  background: var(--green);
+  color: white;
+  font-size: 28px;
+  border-radius: 6px;
+  padding: 7px 13px;
+}
+
+.hero {
+  min-height: 650px;
+  position: relative;
+  overflow: hidden;
+  background: #f8fbf9;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.93) 42%, rgba(255,255,255,0.38) 70%, rgba(255,255,255,0.1) 100%),
+    url("hero-cleaning.jpg");
+  background-size: cover;
+  background-position: center right;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 790px;
+  padding: 120px 7% 70px;
+}
+
+.eyebrow {
+  color: var(--green);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.center {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 5vw, 76px);
+  line-height: 1;
+  margin-bottom: 23px;
+  letter-spacing: -2px;
+}
+
+.hero h1 span,
+.about-text h2 span {
+  color: var(--green);
+}
+
+.hero-text {
+  color: #263238;
+  font-size: 21px;
+  max-width: 690px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin: 32px 0 46px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 26px;
+  border-radius: 6px;
+  font-weight: 900;
+}
+
+.primary {
+  background: var(--green);
+  color: white;
+}
+
+.secondary {
+  background: white;
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+
+.trust-row {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.trust-row div {
+  width: 205px;
+  background: white;
+  padding: 18px 18px;
+  border-left: 5px solid var(--green);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.trust-row strong {
+  display: block;
+  color: var(--text);
+}
+
+.trust-row small {
+  color: var(--muted);
+}
+
+.section {
+  padding: 78px 7%;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: 1.15;
+  margin-bottom: 34px;
+}
+
+.services {
+  background: linear-gradient(180deg, #f8fffa, #ffffff);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.service-card {
+  background: white;
+  text-align: center;
+  padding: 32px 22px;
+  border-radius: 11px;
+  border: 1px solid #e5f2ea;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.08);
+  transition: 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--green);
+}
+
+.service-icon {
+  font-size: 40px;
+  margin-bottom: 14px;
+}
+
+.service-card h3 {
+  color: var(--green-dark);
+  margin-bottom: 8px;
+}
+
+.service-card p {
+  color: var(--muted);
+}
+
+.stats {
+  background: linear-gradient(90deg, #05451f, #087a34);
+  color: white;
+  padding: 38px 7%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  text-align: center;
+}
+
+.stats strong {
+  display: block;
+  font-size: 28px;
+  line-height: 1.15;
+}
+
+.stats span {
+  opacity: 0.9;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.about-text h2 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: var(--muted);
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.about-text ul {
+  list-style: none;
+}
+
+.about-text li {
+  position: relative;
+  padding-left: 30px;
+  margin: 12px 0;
+}
+
+.about-text li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  background: var(--green);
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 13px;
+}
+
+.industries {
+  background: #f8fffa;
+}
+
+.industry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.industry-tags span {
+  background: white;
+  color: var(--green-dark);
+  border: 1px solid #cdebd6;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-weight: 900;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 13px;
+  box-shadow: var(--shadow);
+}
+
+.cta {
+  background:
+    linear-gradient(rgba(4,84,36,0.92), rgba(4,84,36,0.92)),
+    url("facility-cleaning.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 65px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.cta h2 {
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.15;
+}
+
+.cta p {
+  font-size: 19px;
+  margin-top: 8px;
+}
+
+.white {
+  background: white;
+  color: var(--green);
+}
+
+.white-outline {
+  color: white;
+  border: 2px solid white;
+  margin-left: 12px;
+}
+
+.contact {
+  background: var(--green-dark);
+  color: white;
+  padding: 62px 7%;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 55px;
+}
+
+.contact-info img {
+  width: 240px;
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 12px;
+}
+
+.quote-form {
+  background: rgba(255,255,255,0.09);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.quote-form h2 {
+  margin-bottom: 18px;
+  font-size: 30px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 14px;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.quote-form button {
+  width: 100%;
+  border: none;
+  background: #78b943;
+  color: white;
+  padding: 16px;
+  border-radius: 6px;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.form-note {
+  font-size: 13px;
+  opacity: 0.85;
+  margin-top: 12px;
+}
+
+footer {
+  background: #032813;
+  color: white;
+  text-align: center;
+  padding: 18px;
+}
+
+@media (max-width: 1000px) {
+  .topbar {
+    flex-direction: column;
+  }
+
+  .topbar-links {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    left: 7%;
+    right: 7%;
+    top: 105px;
+    background: white;
+    padding: 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: var(--shadow);
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .hero-bg {
+    background:
+      linear-gradient(90deg, rgba(255,255,255,0.96), rgba(255,255,255,0.88)),
+      url("hero-cleaning.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-content {
+    padding: 80px 7%;
+  }
+
+  .service-grid,
+  .stats,
+  .about,
+  .gallery-grid,
+  .contact,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .white-outline {
+    display: inline-block;
+    margin-left: 0;
+    margin-top: 12px;
+  }
+
+  .logo img {
+    width: 190px;
+  }
+}
